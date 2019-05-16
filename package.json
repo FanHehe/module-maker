@@ -1,0 +1,14 @@
+{
+  "name": "module-maker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node tests/test"
+  },
+  "author": "",
+  "license": "ISC"
+}
