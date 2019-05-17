@@ -12,25 +12,25 @@
 
 ```javascript
 
-	// 加载本模块
-	const proxy = require('module-maker');
+// 加载本模块
+const proxy = require('module-maker');
 	
-	// 存在这个文件则加载，不存在则新建这个文件。
-	// 默认生成js文件，可以根据文件名后缀，生成js或者json
-	const target = proxy.require('../index.js');
-	
-	// 直接修改required的对象
-	target.obj = {
-		a: 1,
-		b: '2',
-		c: null,
-		d: undefined
-	};
+// 存在这个文件则加载，不存在则新建这个文件。
+// 默认生成js文件，可以根据文件名后缀，生成js或者json
+const target = proxy.require('../index.js');
 
-	target.ccc = 1;
+// 直接修改required的对象
+target.obj = {
+    a: 1,
+    b: '2',
+    c: null,
+    d: undefined
+};
+
+target.ccc = 1;
 	
-	// 将加到到的配置写回原文件
-	target.save();
+// 将加到到的配置写回原文件
+target.save();
 ```
 
 #### 示例
@@ -41,7 +41,7 @@
 const target = {
 	b: {
 		_: 'xxxxx',
-		a: 1, 
+        a: 1, 
 		b: 'ddddddddd',
 		d: JSON.stringify({a: 1}),
 		e: 'fdsafdsf',
